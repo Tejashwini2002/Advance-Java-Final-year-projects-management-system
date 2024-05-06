@@ -98,7 +98,8 @@ public class Main {
              System.out.println("3. Search by project name");
              System.out.println("4. Search by student name");
              System.out.println("5. Update research paper status of the project");
-             System.out.println("6. Exit");
+	     System.out.println("6. View all projects"); 
+             System.out.println("7. Exit");
 
              int facultyOption = scanner.nextInt();
              scanner.nextLine(); // Consume the newline character
@@ -154,8 +155,10 @@ public class Main {
 
                      Faculty.update(researchpaperstatus,teamid);
                      break;
-
-                 case 6:
+		  case 6:
+		     FYproject.viewallprojects();
+		     break;
+                  case 7:
                      System.out.println("Exiting faculty menu.");
                      System.exit(0);
                  default:
